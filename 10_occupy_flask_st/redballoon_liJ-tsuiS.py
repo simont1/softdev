@@ -29,7 +29,7 @@ def pickRandom(f):
 
 def randOcc():
     dict = convert("occupations.csv")
-    return "weighted random pick: " + pickRandom(f)
+    return "weighted random pick: " + pickRandom(dict)
 
 app = Flask(__name__)
 
