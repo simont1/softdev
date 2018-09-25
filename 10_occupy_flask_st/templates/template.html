@@ -6,23 +6,24 @@
     <body>
         <h1>Employment Percentage by Occupation</h1>
         <br>
-        {{ randomOcc }}
+        {{ randomOcc }} <!--Random weighted occupation -->
         <br>
         <table border="1">
-            <tr><th>Occupation Name</th>
+            <tr><th>Occupation Name</th> <!-- Table header-->
                 <th>Percentage</th>
             </tr>
         {% for i in d %}
+        <!-- Creates new table row to hold occupations and percentages-->
         <tr>
             <td>{{i}}</td>
             <td>{{d[i]}}</td>
         </tr>
         {% endfor %}
         <tr>
-            <td>Total</td>
+            <td>Total</td> <!--Includes last row of the table -->
             <td>99.8</td>
         </tr>
         </table>
-        
+
     </body>
 </html>
