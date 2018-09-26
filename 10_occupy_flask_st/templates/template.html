@@ -1,0 +1,39 @@
+<!-- 
+# Red Balloon - Johnson Li Simon Tsui
+# SoftDev1 pd8
+# K10 -- Jinja Tuning ...
+# 2018-09-22 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Occupations</title>
+</head>
+
+<body>
+    <h1>Employment Percentage by Occupation</h1>
+    <br>
+    {{ randomOcc }}
+    <br>
+    <table border="1">
+        <tr>
+            <th>Occupation Name</th>
+            <th>Percentage</th>
+        </tr>
+        {% for i in d %}
+        <tr>
+            <td>{{i}}</td>
+            <td>{{d[i]}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td>Total</td>
+            <td>99.8</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
