@@ -11,7 +11,7 @@ app = Flask(__name__)
 # route for occupation
 @app.route("/occupations")
 def runOcc():
-    occupationDict = occupations.convert("data/occupations.csv")
+    occupationDict = occupations.conert("data/occupations.csv")
     return render_template("template.html", randomOcc=occupations.randOcc(), d=occupationDict)
 
 
