@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "improved.html" %}
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    {% block greeting %}
+    {% set msgs = get_flashed_messages() %}
+    {% for each in msgs %}
+      {{ each }}
+      <br>
+    {% endfor %}
+    {% endblock %}
+    <!-- {{ a }} invalid! -->
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "improved.html" %}
+<html>
+<head>
+  <title>Welcome Page</title>
+</head>
+<body>
+  {% block greeting %}
+    Welcome, {{ a }}!<br>
+  {% endblock %}
+  {% block content %}
+  <form action= "/logout" method="GET">
+    <input name="logout" type="submit" value="Logout">
+  </form>
+  {% endblock %}
+</body>
+</html>

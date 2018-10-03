@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    {% block title %}
+    Box2
+    {% endblock %}
+  </title>
+</head>
+<body>
+  {% block greeting %}
+  {% endblock %}
+  {% block content %}
+  <form action= "/auth" method="GET">
+    Username: <input type = "text" name = "Username"><br>
+    Password: <input type = "text" name = "Password"><br>
+    <input type = "submit" value="Login">
+    </form>
+  {% endblock %}
+  {% block footer %}
+  <img src ="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.photosinbox.com%2Fdownload%2Fopen-shipping-box.jpg&f=1" height = 400 width = 500 />
+  {% endblock %}
+
+</body>
+</html>
