@@ -87,9 +87,9 @@ def add_Row():
     #command = "INSERT INTO courses (code, mark, id) VALUES(code, 100, 90);"
     c.execute(command)
 
-add_Row()
+'''add_Row()
 db.commit()
 command = """SELECT * FROM courses"""
 c.execute (command)
 for row in c:
-    print (row)
+    print (row)'''
