@@ -1,3 +1,8 @@
+//Simon Tsui
+//Softdev1 pd08
+//K28 -- Sequential Progession
+//2018-12-18
+
 var fib = function(n){
     if( n < 2){
 	return n;
