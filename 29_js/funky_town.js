@@ -5,10 +5,10 @@
 
 var fibonacci = function(n){
     if (n < 2){
-	return n;
+    return n;
     }
     else{
-	return fibonacci(n-1) + fibonacci(n-2);
+    return fibonacci(n-1) + fibonacci(n-2);
     };
 };
 
@@ -21,41 +21,36 @@ var gcd = function(a,b){
     };
 };
 
-var students = ["a", "b", "c", "d", "e"]
+var students = ["a", "b", "c", "d", "e"];
 
 var randomStudent = function(){
     return students[Math.floor(Math.random() * students.length)];
 };
 
 var display1 = function(){
-  console.log(fibonacci(8));
-}
+
+  var ans = fibonacci(8);
+  console.log(ans);
+  document.getElementById('info').innerHTML = 'fibonacci(8)';
+  document.getElementById('demo').innerHTML = ans;
+};
 var display2 = function(){
-  console.log(gcd(18, 42));
-}
+  var ans = gcd(18, 42);
+  console.log(ans);
+    document.getElementById('info').innerHTML = 'gcd(18, 42)';
+  document.getElementById('demo').innerHTML = ans;
+};
 var display3 = function(){
-  console.log(randomStudent(students));
-}
-
-var clicked1 = document.getElementById("1");
-clicked1.addEventListener('click', display1);
-
-var clicked2 = document.getElementById("2");
-clicked2.addEventListener('click', display2);
-
-var clicked3 = document.getElementById("3");
-clicked3.addEventListener('click', display3);
+  var ans = (randomStudent(students));
+  console.log(ans);
+    document.getElementById('info').innerHTML = 'students = ["a", "b", "c", "d", "e"]';
+  document.getElementById('demo').innerHTML = ans;
+};
 
 
-var display4 = document.getElementById("4");
-
-
-if(clicked1){
-  display4.innerHTML = fibonacci(8);
-}
-else if(clicked2){
-  display4.innerHTML = gcd(18,42);
-}
-else if(clicked3){
-  display4.innerHTML = randomStudent(students);
-}
+var func1 = document.getElementById("1");
+func1.addEventListener('click', display1);
+var func2 = document.getElementById("2");
+func2.addEventListener('click', display2);
+var func3 = document.getElementById("3");
+func3.addEventListener('click', display3);
