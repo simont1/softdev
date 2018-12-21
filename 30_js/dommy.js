@@ -1,7 +1,7 @@
-//Byteme -- Robin Han & Simon Tsui
+//Simon Tsui
 //Softdev pd8
-//K28 -- Sequential Progression
-//2018-12-18
+//K30 -- Sequential Progression III: Season of the Witch
+//2018-12-21F
 
 var fibonacci = function(n){
     if (n < 2){
@@ -13,23 +13,54 @@ var fibonacci = function(n){
 };
 
 
-var display1 = function(){
-
-  //var ans = fibonacci(8);
-  //console.log(ans);
-  //document.getElementById('info').innerHTML = 'fibonacci(8)';
-  //document.getElementById('demo').innerHTML = ans;
-};
-
-
-var func1 = document.getElementById("b");
-func1.addEventListener('click', add1);
-
+var target = document.getElementById("thelist");
+var fibby = document.getElementById("fiblist");
+var fibCtr = 1;
 
 var add1 = function(){
-    var tag = document.createElement('p');
-    tag.appendChild("word");
+    var tag = document.createElement('li');
+    var node = document.createTextNode("word");
+    tag.addEventListener("mouseover", changeHeading);
+    tag.addEventListener("mouseout", function() {
+        document.getElementById("h").innerHTML = "Hello World!";
+    });
+    tag.addEventListener("click", removeItem);
+    tag.appendChild(node);
+    target.appendChild(tag);
     console.log('word');
 };
 
+var changeHeading = function(e) {
+    var heading = document.getElementById("h");
+    heading.innerHTML = this.innerHTML;
+};
 
+var removeItem = function(e) {
+    this.remove();
+    var heading = document.getElementById("h");
+    heading.innerHTML = "Hello World!";
+};
+
+var lis = document.getElementsByTagName("li");
+for (var i = 0; i < lis.length; i++) {
+    lis[i].addEventListener("mouseover", changeHeading);
+    lis[i].addEventListener("mouseout", function() {
+        document.getElementById("h").innerHTML = "Hello World!";
+    });
+    lis[i].addEventListener("click", removeItem);
+};
+
+var fibAdd = function(){
+  var total = fibonacci(fibCtr);
+  fibCtr += 1;
+  var tag = document.createElement('li');
+  var node = document.createTextNode(total);
+  tag.appendChild(node);
+  fibby.appendChild(tag);
+  console.log(total);
+}
+
+var func1 = document.getElementById("b");
+func1.addEventListener('click', add1);
+var func2 = document.getElementById("fb");
+func2.addEventListener("click", fibAdd);
